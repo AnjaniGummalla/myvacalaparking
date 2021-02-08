@@ -70,7 +70,7 @@ var schedule = require('node-schedule');
 var mongoXlsx = require('mongo-xlsx');
 /* DB connectivity */
 const mongoose = require('mongoose'); 
-mongoose.connect('mongodb+srv://myvacalaparking:myvacala@cluster0.voivj.mongodb.net/myvacalaparking?retryWrites=true&w=majority'); 
+mongoose.connect('mongodb+srv://myvacalaparking:myvacalaparking@cluster0.voivj.mongodb.net/myvacala?retryWrites=true&w=majority'); 
 var db = mongoose.connection; 
 db.on('error', console.log.bind(console, "connection error")); 
 db.once('open', function(callback){ 
