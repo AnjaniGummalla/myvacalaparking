@@ -9,9 +9,9 @@ var debug = require('debug')('vacala:server');
 var http = require('http');
 const https = require('https');
 const fs = require('fs');
-var privateKey  = fs.readFileSync('/etc/nginx/ssl/myvacala.com.key', 'utf8');
-var certificate = fs.readFileSync('/etc/nginx/ssl/6128b8b4785af1f3.crt', 'utf8');
-var credentials = {key: privateKey, cert: certificate};
+// var privateKey  = fs.readFileSync('/etc/nginx/ssl/myvacala.com.key', 'utf8');
+// var certificate = fs.readFileSync('/etc/nginx/ssl/6128b8b4785af1f3.crt', 'utf8');
+// var credentials = {key: privateKey, cert: certificate};
 
 // var https = require('https');
 // var fs = require('fs');
@@ -51,9 +51,9 @@ app.set('port', port);
  */
 
 //var server = http.createServer(app);
-var credentials = {key: privateKey, cert: certificate};
+//var credentials = {key: privateKey, cert: certificate};
 
-var server = https.createServer(credentials, app);
+var server = https.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
